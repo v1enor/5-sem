@@ -1,0 +1,148 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="792">
+            <TabItem Header="Поток">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="79*"/>
+                        <ColumnDefinition Width="707*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Zad2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="57" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Width="684" Margin="50,338,0,0" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="" Binding="{Binding Line}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C12" Binding="{Binding B1}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C13" Binding="{Binding B2}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C23" Binding="{Binding B3}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C32" Binding="{Binding B4}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C24" Binding="{Binding B5}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C26" Binding="{Binding B6}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C36" Binding="{Binding B7}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C63" Binding="{Binding B8}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C35" Binding="{Binding B9}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C56" Binding="{Binding B10}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C65" Binding="{Binding B11}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C64" Binding="{Binding B12}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C46" Binding="{Binding B13}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C47" Binding="{Binding B14}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C67" Binding="{Binding B15}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C57" Binding="{Binding B16}" IsReadOnly="True" Width="40"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid x:Name="Zad" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="57" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Width="684" Margin="50,400,0,0" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="F" Binding="{Binding Line}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X12" Binding="{Binding B1}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X13" Binding="{Binding B2}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X23" Binding="{Binding B3}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X32" Binding="{Binding B4}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X24" Binding="{Binding B5}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X26" Binding="{Binding B6}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X36" Binding="{Binding B7}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X63" Binding="{Binding B8}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X35" Binding="{Binding B9}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X56" Binding="{Binding B10}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X65" Binding="{Binding B11}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X64" Binding="{Binding B12}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X46" Binding="{Binding B13}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X47" Binding="{Binding B14}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X67" Binding="{Binding B15}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X57" Binding="{Binding B16}" IsReadOnly="True" Width="40"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Image Margin="0,32,383,278" Source="1.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+                    <Image Grid.Column="1" Margin="339,32,133,438" Source="2.png" Stretch="Fill"/>
+                    <Image Grid.Column="1" Margin="339,108,10,278" Source="3.png" Stretch="Fill"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Стоимость">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="145*"/>
+                        <ColumnDefinition Width="641*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Zad4" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="57" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Width="412" Margin="43,336,0,0" Grid.Column="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="" Binding="{Binding Line}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C12" Binding="{Binding B1}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C13" Binding="{Binding B2}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C23" Binding="{Binding B3}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C24" Binding="{Binding B4}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C25" Binding="{Binding B5}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C34" Binding="{Binding B6}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C35" Binding="{Binding B7}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C53" Binding="{Binding B8}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C45" Binding="{Binding B9}" IsReadOnly="True" Width="40"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid x:Name="Zad3" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="57" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Width="412" Margin="43,398,0,0" Grid.Column="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="F" Binding="{Binding Line}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X12" Binding="{Binding B1}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X13" Binding="{Binding B2}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X23" Binding="{Binding B3}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X24" Binding="{Binding B4}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X25" Binding="{Binding B5}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X34" Binding="{Binding B6}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X35" Binding="{Binding B7}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X53" Binding="{Binding B8}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X45" Binding="{Binding B9}" IsReadOnly="True" Width="40"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Image Margin="14,28,433,278" Source="4.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+                    <Image Grid.Column="1" Margin="244,58,10,302" Source="5.png" Stretch="Fill"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Маршрут">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="82*"/>
+                        <ColumnDefinition Width="695*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Zad5" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="57" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Width="492" Margin="67,370,0,0" Grid.Column="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="" Binding="{Binding Line}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C12" Binding="{Binding B1}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C13" Binding="{Binding B2}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C32" Binding="{Binding B3}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C24" Binding="{Binding B4}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C27" Binding="{Binding B5}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C34" Binding="{Binding B6}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C35" Binding="{Binding B7}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C45" Binding="{Binding B8}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C47" Binding="{Binding B9}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C56" Binding="{Binding B10}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="C67" Binding="{Binding B11}" IsReadOnly="True" Width="40"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid x:Name="Zad6" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="57" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Width="492" Margin="67,432,0,0" Grid.Column="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="F" Binding="{Binding Line}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X12" Binding="{Binding B1}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X13" Binding="{Binding B2}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X32" Binding="{Binding B3}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X24" Binding="{Binding B4}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X27" Binding="{Binding B5}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X34" Binding="{Binding B6}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X35" Binding="{Binding B7}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X45" Binding="{Binding B8}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X47" Binding="{Binding B9}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X56" Binding="{Binding B10}" IsReadOnly="True" Width="40"/>
+                            <DataGridTextColumn Header="X67" Binding="{Binding B11}" IsReadOnly="True" Width="40"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Image Grid.Column="2" Margin="46,10,112,257" Source="6.png" Stretch="Fill"/>
+                    <Image Grid.Column="2" Margin="136,297,198,184" Source="7.png" Stretch="Fill"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

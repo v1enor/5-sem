@@ -1,0 +1,277 @@
+/* By Dominik Biedebach @domobch */
+
+.main {
+  margin-top: 10%;
+  padding: 0 5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+p {
+  /* text-indent: 2%; */
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  /* padding: ; */
+  background: #fff;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0px;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #343a40;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 5px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.shift ul li a {
+  position: relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #f8f9fa;
+}
+
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ".";
+  color: transparent;
+  background: #252525;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+#ustanovka {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #2ecc71;
+  }
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+figcaption {
+  margin: 0;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: #bb3333;
+}
+
+#shift {
+  min-width: 400;
+}
+
+@media (max-width: 805px) {
+  .main {
+    margin-top: 17%; /* Отступ сверху в 40 пикселей */
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin-top: 24%; /* Отступ сверху в 40 пикселей */
+  }
+}
+
+/* Смена цвета */
+i.change-text {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+i.change-text:hover {
+  color: #cc2e9d; /* Меняем цвет текста */
+}
+
+.dialog {
+  margin: 20px 0;
+  display: block;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-family: "Roboto", sans-serif;
+}
+
+.dialog__window {
+  overflow: hidden;
+}
+
+.dialog__header {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #1047A9;
+  color: #fff;
+  font-size: 32px;
+}
+
+.dialog__body {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+  word-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+.dialog__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dialog__input {
+  width: 100%;
+  padding: 15px 25px;
+  background-color: #a1a5e2;
+  font-family: "Roboto", sans-serif;
+}
+
+.dialog__input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.dialog__input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.dialog__input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.dialog__input::placeholder {
+  color: #fff;
+}
+
+.dialog__button {
+  padding: 0 30px;
+  background-color: #1047A9;
+  color: #fff;
+  font-size: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dialog__button-hover {
+  padding: 0 40px;
+  background-color: #e1e2f3;
+  color: #5055b8;
+  font-size: 2.5rem;
+}
+
+.dialog__button-listen {
+  padding: 0 40px !important;
+  background-color: #ffc6c6 !important;
+  color: #ff2d2d !important;
+  font-size: 2.5rem !important;
+}
+
+.dialog__message {
+  margin: 5px;
+  padding: 10px;
+  max-width: 60%;
+  text-align: justify;
+}
+
+.dialog__message.question {
+  margin-left: auto;
+  background-color: #545ac783;
+  color: rgb(0, 0, 0);
+}
+
+.dialog__message.answer {
+  margin-right: auto;
+  background-color: #545ac783;
+}
+
+.dialog__image {
+  margin: 5px;
+  margin-right: auto;
+  width: 40%;
+}

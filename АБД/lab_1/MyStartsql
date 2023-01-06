@@ -1,0 +1,55 @@
+--create table XXX_t(x number(3) not null, s varchar2(50));
+
+alter table xxx_t add primary key (x);
+
+
+
+insert INTO xxx_t (X,S) values (1,'22');
+insert INTO xxx_t (X,S) values (12,'221');
+insert INTO xxx_t (X,S) values (13,'224');
+insert INTO xxx_t (X,S) values (15,'224');
+commit;
+    
+SELECT * FROM  xxx_t;
+select * from xxx_t1;
+update xxx_t set S = 'edit'  where X = 1;
+commit;
+
+delete from xxx_t where S = '224';
+commit;
+
+
+
+
+
+create table xxx_t1 (
+    id number(3) not null , 
+    name VARCHAR(50),
+    CONSTRAINT FK_xxxx FOREIGN KEY (id)
+    REFERENCES xxx_t(x)
+    )
+
+insert INTO xxx_t1 (id,name) values (1,'test');
+insert INTO xxx_t1 (id,name) values (12,'ilya');
+insert INTO xxx_t1 (id,name) values (13,'cat');
+commit;
+
+select x,name from 
+    xxx_t left outer join xxx_t1
+    on xxx_t.x = xxx_t1.id ;
+    
+select x,name from 
+    xxx_t RIGHT OUTER JOIN xxx_t1
+    on xxx_t.x = xxx_t1.id ;
+    
+select x,name from 
+    xxx_t JOIN xxx_t1
+    on xxx_t.x = xxx_t1.id ;
+
+
+ALTER TABLE xxx_t1
+DROP CONSTRAINT FK_xxxx; 
+    
+drop table xxx_t;
+drop table xxx_t1;
+    

@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Использование MatchJAX  https://bit.ly/2GZF5HS -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="active.js" defer=""></script>
+    <script type="text/javascript" src="jquery.js" defer=""></script>
+    <title>Структура установки</title>
+  </head>
+  <body>
+    <nav class="shift">
+      <ul>
+        <ul>
+          <li><a href="title.html">Главная</a></li>
+          <li><a href="theory.html">Теоретические сведения</a></li>
+          <li><a href="struct.html">Структура установки</a></li>
+          <li><a href="simulator.html">Симулятор установки</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+      <div class="photo">
+        <h1>Фото установки</h1>
+        <p><img src="img_ustanovka\PXL_20221004_092747824.jpg" id="r1" width="600" height="800" /> </p>
+        <p onmousedown="document.getElementById('r1').src='img_ustanovka/PXL_20221004_092747824.jpg'">Измеритель добротности Е4-7</p>
+        <p onmousedown="document.getElementById('r1').src='img_ustanovka/PXL_20221004_092753944.jpg'">Коробка для катушек и образцов</p>
+        <p onmousedown="document.getElementById('r1').src='img_ustanovka/PXL_20221004_092759210.jpg'">Материалы образцов</p>
+      </div>
+      <div class="map">
+        <h1>Карта установки</h1>
+          <iframe src="map_sutanovka/ust.html" frameborder="0" width="600" height="800"></iframe>
+      </div>
+      <div class="video_review">
+          <h1>Видеообзор установки</h1>
+          <iframe src="video_ustanovka/videos_HTML.html" frameborder="0" width="800" height="800"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
