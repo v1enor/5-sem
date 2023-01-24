@@ -1,0 +1,229 @@
+-- take cust_num
+
+create or replace procedure proc(comp in customers.company%type) is
+   CURSOR curs is SELECT amount, description  FROM orders join customers on cust = cust_num join products on  product=product_id   WHERE customers.company = comp ORDER BY amount ASC;
+   amount orders.amount%type;
+   nameProd products.description%type;
+   count1 number:=0;
+BEGIN
+    open curs;
+        fetch curs into amount,nameProd;
+        loop
+            exit when curs%notfound;
+            DBMS_OUTPUT.PUT_LINE('компани€: '||comp ||'  цена продукта: '||amount ||' наименование продукта '|| nameProd);
+            count1:=count1+amount;
+            fetch curs into amount,nameProd;
+        end loop;
+    close curs;
+    DBMS_OUTPUT.PUT_LINE('итогова€ стоимость: '||count1);
+  EXCEPTION
+WHEN OTHERS THEN
+   raise_application_error(-20001,'An error was encountered - '||SQLCODE||' -ERROR- '||SQLERRM);
+END;
+
+exec proc('Acme Mfg.');
+
+
+
+
+
+----5)—оздайте процедуру, котора€ выводит список покупателей, в пор€дке убывани€ общей стоимости заказов. ѕараметры Ц дата начала периода, дата окончани€ периода. ќбработайте возможные ошибки.
+
+create or replace procedure porc2(start1 in date, finish1 in date)is
+  cursor curs is select company, sum(amount) from orders join customers on cust = cust_num where order_date between start1 and finish1 group by company order by sum(amount);
+  companys customers.company%type;
+  amounts orders.amount%type;
+begin
+    open curs;
+    fetch curs into companys, amounts;
+    if curs%found
+    then
+        loop
+            exit when curs%notfound;
+            dbms_output.put_line('ѕокупатели: '||companys||' цена: '||amounts);
+            fetch curs into companys, amounts;
+        end loop;
+    else
+        dbms_output.put_line('за данный период ниху€ нет!!!!!');
+    end if;
+    close curs;
+    EXCEPTION
+      WHEN OTHERS THEN
+        dbms_output.put_line('код ошибки: '|| SQLCODE  ||SQLERRM);
+end;
+
+exec porc2('17.02.25','27.12.25');
+
+--- 7) —оздайте процедуру, котора€ выводит список покупателей, у которых есть заказы в этом временном периоде. ѕараметры Ц дата начала периода, дата окончани€ периода. ќбработайте возможные ошибки
+
+create or replace procedure govno(date1 in date, date2 in date)is
+cursor curs is select DISTINCT(company)  from orders join customers on cust=cust_num where order_date between date1 and date2;
+companys customers.company%type;
+begin
+    open curs;
+    fetch curs into companys;
+    loop
+        exit when curs%notfound;
+        dbms_output.put_line('компани€ котора€ заказала с '||date1 ||' по '||date2 ||' : '||companys);
+        fetch curs into companys;
+    end loop;
+    close curs;
+    
+    EXCEPTION
+      WHEN OTHERS THEN
+        dbms_output.put_line('номер ошибки: '||SQLCODE|| ' ошибка: ' || SQLERRM);
+end;
+
+exec govno('12.12.07','31.12.07');
+
+
+
+
+---- 9) —оздайте процедуру, котора€ увеличивает на 10% стоимость определенного товара. ѕараметр Ц наименование товара. ќбработайте возможные ошибки
+
+create or replace procedure zad(nameProd in products.description%type) is
+n number(6);
+begin 
+    select count(*) into n from products where description = nameProd; 
+    if n>0
+        then
+        update products set price = price * 1.1 where description = nameProd;
+    else
+         DBMS_OUTPUT.PUT_LINE('товар не найден');   
+    end if;
+    EXCEPTION
+      WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE(SQLCODE || SQLERRM);
+end;
+
+
+exec zad('900-LB Brace');
+
+
+
+---2) —оздайте функцию, котора€ подсчитывает количество заказов покупател€ за определенный период. ѕараметры Ц покупатель, дата начала периода, дата окончани€ периода.
+
+
+create or replace function fun(cutsNum in orders.cust%type, date1 in date,date2 in date) 
+return int
+ is
+ x number(3);
+begin
+    select count(cust) into x from orders where cust = cutsNum and order_date between date1 and date2;
+    return x;
+    EXCEPTION
+      WHEN OTHERS THEN
+        dbms_output.put_line(SQLCODE||SQLERRM);
+end;
+
+begin
+    dbms_output.put_line(fun('2103','12.12.07','31.12.07'));
+end;
+
+
+---4)—оздайте функцию, котора€ добавл€ет покупател€ в таблицу Customers, и возвращает код добавленного покупател€ или -1 в случае ошибки. 
+---ѕараметры соответствуют столбцам таблицы, кроме кода покупател€, который задаетс€ при помощи последовательности.
+
+CREATE SEQUENCE testw
+  MINVALUE 1
+  MAXVALUE 9999
+  START WITH 2124
+  INCREMENT BY 1;
+
+
+create or replace function zad1(companyName in customers.company%type, custRep in customers.cust_rep%type, credit in customers.credit_limit%type)
+return customers.cust_num%type
+is
+x customers.cust_num%type;
+begin 
+    --SELECT max(customers.cust_num) into x  FROM customers;
+    --insert into customers values(x+1, companyname, custrep, credit);
+    insert into customers values(testw.NEXTVAL, companyname, custrep, credit);
+    return testw.CURRVAL;
+    exception 
+        when others then
+            dbms_output.put_line(SQLCODE||SQLERRM);
+            return -1;
+end;
+
+begin
+    dbms_output.put_line(zad1('NAMECOMP11','101','25000'));
+end;
+
+
+
+------ по коду покупател€ самый дорогой продукт
+
+
+create or replace function func(custNum in orders.cust%type) 
+return orders.amount%type
+is 
+amounts products.amount%type;
+x number(3);
+begin
+    select COUNT(amount) into x from orders where orders.cust = custNum;
+    if x>0
+        then
+        select max(amount) into amounts from orders join products on product = product_id where orders.cust = custNum;
+        return amounts;
+    else
+        DBMS_OUTPUT.PUT_LINE('нечиге не найдено');
+        return -1;
+    end if;
+    EXCEPTION
+      WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE(' од ошибки: '|| SQLCODE || ' ошибка: '|| SQLERRM);
+        return -1;
+end;
+
+begin 
+DBMS_OUTPUT.PUT_LINE(func(2103));
+end;
+
+
+
+declare 
+type curs is ref cursor;
+cv curs;
+custs orders%rowtype;
+begin 
+    open cv for
+        'select * from orders where cust = :1' using 2103;
+    loop
+        fetch cv into custs;
+        exit when cv%notfound;
+        DBMS_OUTPUT.PUT_LINE(custs.cust||' '|| custs.amount);
+    end loop;
+    close cv;
+end;
+
+
+
+
+--- максимум по rep и году 
+
+create or replace function f1(selRep  orders.rep%type,date1 number)
+return orders.amount%type
+is
+x orders.amount%type;
+begin
+  
+ select max(amount) into x from orders where REP = selRep and TRUNC(ORDER_DATE,'YYYY')=to_date(date1,'YYYY');
+ return x;
+ exception when OTHERS
+        then 
+            DBMS_OUTPUT.PUT_LINE(SQLCODE||SQLERRM);
+            return -1;
+end;
+     
+     
+begin
+DBMS_OUTPUT.PUT_LINE(f1(108,2008));
+end;
+
+
+
+
+
+
+
