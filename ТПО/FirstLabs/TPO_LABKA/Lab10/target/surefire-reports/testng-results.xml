@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-02T18:52:41 MSK" name="Command line suite" finished-at="2023-01-02T18:54:59 MSK" duration-ms="137483">
+    <groups>
+    </groups>
+    <test started-at="2023-01-02T18:52:41 MSK" name="Command line test" finished-at="2023-01-02T18:54:59 MSK" duration-ms="137483">
+      <class name="Test.MainTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:41 MSK" name="setUp" finished-at="2023-01-02T18:52:43 MSK" duration-ms="1807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_BT_11()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:43 MSK" name="TC_BT_11" description="TC_BT_1" finished-at="2023-01-02T18:52:47 MSK" duration-ms="3559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_BT_11 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:47 MSK" name="stopBrowser" finished-at="2023-01-02T18:52:47 MSK" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:47 MSK" name="setUp" finished-at="2023-01-02T18:52:48 MSK" duration-ms="883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_FAQ_1()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:48 MSK" name="TC_FAQ_1" description="TC_FAQ_1" finished-at="2023-01-02T18:52:55 MSK" duration-ms="7624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_FAQ_1 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:55 MSK" name="stopBrowser" finished-at="2023-01-02T18:52:56 MSK" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:56 MSK" name="setUp" finished-at="2023-01-02T18:52:57 MSK" duration-ms="960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_FBT_1()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:52:57 MSK" name="TC_FBT_1" description="TC_FBT_1" finished-at="2023-01-02T18:53:03 MSK" duration-ms="6235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_FBT_1 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:03 MSK" name="stopBrowser" finished-at="2023-01-02T18:53:03 MSK" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:03 MSK" name="setUp" finished-at="2023-01-02T18:53:04 MSK" duration-ms="919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_FH_2()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:04 MSK" name="TC_FH_2" description="TCH2" finished-at="2023-01-02T18:53:11 MSK" duration-ms="7256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_FH_2 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:11 MSK" name="stopBrowser" finished-at="2023-01-02T18:53:11 MSK" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:11 MSK" name="setUp" finished-at="2023-01-02T18:53:12 MSK" duration-ms="892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_FH_3()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:12 MSK" name="TC_FH_3" description="TTC_FH_3" finished-at="2023-01-02T18:53:41 MSK" duration-ms="28594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_FH_3 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:41 MSK" name="stopBrowser" finished-at="2023-01-02T18:53:41 MSK" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:41 MSK" name="setUp" finished-at="2023-01-02T18:53:42 MSK" duration-ms="912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_FH_4()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:53:42 MSK" name="TC_FH_4" description="TTC_FH_3" finished-at="2023-01-02T18:54:13 MSK" duration-ms="31431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_FH_4 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:13 MSK" name="stopBrowser" finished-at="2023-01-02T18:54:14 MSK" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:14 MSK" name="setUp" finished-at="2023-01-02T18:54:15 MSK" duration-ms="848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_HF_5()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:15 MSK" name="TC_HF_5" description="TC_HF_5" finished-at="2023-01-02T18:54:28 MSK" duration-ms="13328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HF_5 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:28 MSK" name="stopBrowser" finished-at="2023-01-02T18:54:28 MSK" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:28 MSK" name="setUp" finished-at="2023-01-02T18:54:29 MSK" duration-ms="907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_HOTEL_LAN_1()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:29 MSK" name="TC_HOTEL_LAN_1" description="TC_HOTEL_LAN_1" finished-at="2023-01-02T18:54:38 MSK" duration-ms="8889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HOTEL_LAN_1 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:38 MSK" name="stopBrowser" finished-at="2023-01-02T18:54:38 MSK" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:38 MSK" name="setUp" finished-at="2023-01-02T18:54:39 MSK" duration-ms="860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_HR_1()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:39 MSK" name="TC_HR_1" description="TC_HR_1" finished-at="2023-01-02T18:54:46 MSK" duration-ms="7099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_HR_1 -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:46 MSK" name="stopBrowser" finished-at="2023-01-02T18:54:46 MSK" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:46 MSK" name="setUp" finished-at="2023-01-02T18:54:47 MSK" duration-ms="883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TETSaS()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:47 MSK" name="TETSaS" description="TCH1" finished-at="2023-01-02T18:54:59 MSK" duration-ms="11527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TETSaS -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:Test.MainTest@51931956]" started-at="2023-01-02T18:54:59 MSK" name="stopBrowser" finished-at="2023-01-02T18:54:59 MSK" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+      </class> <!-- Test.MainTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

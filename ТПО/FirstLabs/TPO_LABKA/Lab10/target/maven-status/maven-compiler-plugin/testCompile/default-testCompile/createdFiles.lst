@@ -1,0 +1,8 @@
+webDriver\DriverSingleton.class
+page\FAQPage.class
+Test\CommonConditions.class
+page\BlogPage.class
+page\Hotel.class
+Test\MainTest.class
+page\AbstractPage.class
+page\SearchPage.class
